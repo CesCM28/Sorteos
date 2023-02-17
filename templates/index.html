@@ -1,0 +1,81 @@
+{% extends 'base.html' %} 
+{% block title %} Sorteo {% endblock %} 
+
+{% block content %}
+<div id="fotos" class="container-md carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="2000">
+      <img src="../static/img/1.jpg" class="d-block w-100" alt="1">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="../static/img/2.jpg" class="d-block w-100" alt="2">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="../static/img/3.jpg" class="d-block w-100" alt="3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#fotos" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#fotos" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div id="preguntasFrecuentes" class="container-fluid text-light bg-black">
+  <div class="container-lg py-4">
+    <h1 class="text-center pb-4">Preguntas Frecuentes</h1>
+    <h3>¿CÓMO SE ELIGE A LOS GANADORES?</h3>
+    <p>
+      Todos nuestros sorteos se realizan en base a la Lotería Nacional para la Asistencia Pública mexicana.
+    </p>
+    <p>
+      El ganador de 4 Camaradas será el participante cuyo número de boleto coincida con las últimas cifras del primer premio ganador de la Lotería Nacional (las fechas serán publicadas en nuestra página oficial).
+    </p>
+    <h3>¿QUÉ SUCEDE CUANDO EL NÚMERO GANADOR ES UN BOLETO NO VENDIDO?</h3>
+    <p>
+      Se elige un nuevo ganador realizando la misma dinámica en otra fecha cercana (se anunciará la nueva fecha).
+    </p>
+    <p>
+      Esto significa que, ¡Tendrías el doble de oportunidades de ganar con tu mismo boleto!
+    </p>
+    <h3>¿DÓNDE SE PUBLICA A LOS GANADORES?</h3>
+    <p>
+      En nuestra página oficial de Facebook 4 Camaradas puedes encontrar todos y cada uno de nuestros sorteos anteriores, así como las transmisiones en vivo con Lotería Nacional y las entregas de premios a los ganadores!
+    </p>
+  </div>
+</div>
+<div id="nosotros" class="container-fluid">
+  <div class="container-lg py-4">
+    <h1 class="text-center pb-4">Nosotros</h1>
+    <p class="text-center">
+      Sorteo entre amigos en base a la Loteria Nacional
+    </p>
+    <p class="text-center">
+      Arriesga poco y gana mucho!
+    </p>
+  </div>
+</div>
+<div id="contacto" class="container-fluid text-light bg-black">
+  <div class="container-lg py-4">
+    <h1 class="text-center pb-4">Contácto</h1>
+    <h3 class="col text-center">
+        Whatsapp: (639) 123 45 67
+    </h3>
+    <div class="row justify-content-center">
+      <div class="col-2">
+        <a class="a-none" href="#" target="_blank">
+          <img class="rounded mx-auto d-block" style="width: 50px;" src="../static/img/fblogo.png" alt="Facebook">
+        </a>
+      </div>
+      <div class="col-2">
+        <a class="a-none" href="#" target="_blank">
+          <img class="rounded mx-auto d-block" style="width: 50px;" src="../static/img/fblogo.png" alt="Facebook">
+        </a>
+      </div>
+    </div>
+    <h5 class="text-center pt-5"><a href="{{ url_for('aviso_privacidad') }}">Aviso de Privacidad</a></h5>
+  </div>
+</div>
+{% endblock %}
