@@ -36,12 +36,14 @@
           </div>
         </div>
       </div>
-    <div class="row">
+    <div id="posible" class="row">
+      <button class="bg-primary regresar" onclick="regresar()">Regresar</button>
+    </div>
+    <div id="disponibles" class="row">
         {% for number in numeros %}
-            <button id="{{ number }}" class="col border rounded-pill m-lg-2 m-sm-1 text-center" data-bs-target="#modalToggle" style="max-width:75px;" data-bs-toggle="modal">{{ number }}</button>
+        <!-- data-bs-target="#modalToggle" data-bs-toggle="modal"-->
+            <button id="{{ number }}" class="col border rounded-pill m-lg-2 m-sm-1 text-center boleto"  style="max-width:75px;" >{{ number }}</button>
         {% endfor %}
     </div>
 </div>
-
-<script src="../static/script.js"></script>
 {% endblock %}

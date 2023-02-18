@@ -19,7 +19,8 @@ def aviso_privacidad():
 @app.route("/boletos", methods=["GET"])
 def boletos():
     numeros = []
-    for numero in range(10000):
+    #10000
+    for numero in range(100):
         numeros.append(str(numero).zfill(4))
 
     return render_template("boletos.html", numeros=numeros)
