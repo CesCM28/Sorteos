@@ -36,13 +36,18 @@
           </div>
         </div>
       </div>
-    <div id="posible" class="row">
-      <button class="bg-primary regresar" onclick="regresar()">Regresar</button>
+    <div class="row m-2">
+      <div class="col d-flex justify-content-evenly">
+        <button type="button" class="btn btn-primary regresar" onclick="regresar()">Regresar</button>
+        <button ype="button" class="btn btn-success" data-bs-target="#modalToggle" data-bs-toggle="modal">Comprar</button>
+      </div>
     </div>
-    <div id="disponibles" class="row">
+    <div id="posible" class="row d-flex justify-content-center m-2">
+      
+    </div>
+    <div id="disponibles" class="row d-flex justify-content-center m-2">
         {% for number in numeros %}
-        <!-- data-bs-target="#modalToggle" data-bs-toggle="modal"-->
-            <button id="{{ number }}" class="col border rounded-pill m-lg-2 m-sm-1 text-center boleto"  style="max-width:75px;" >{{ number }}</button>
+          <button id="{{ number }}" class="col border rounded-pill m-lg-2 m-sm-1 text-center boleto"  style="max-width:75px;" >{{ number }}</button>
         {% endfor %}
     </div>
 </div>
